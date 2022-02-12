@@ -14,7 +14,7 @@
     "reactjs-popup": "^2.0.5",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://hiagobriano.github.io/project-recipes",
+  "homepage": "https://hiagobriano.github.io/Projeto-Receitas",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
