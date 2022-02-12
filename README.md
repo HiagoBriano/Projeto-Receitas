@@ -4,7 +4,7 @@ Estamos desenvolvendo um site de receitas, utilizando o que há de mais moderno 
 
 Nele será possível ver, buscar, filtrar, favoritar e acompanhar o progresso de preparação de receitas e drinks!
 
-A base de dados serão 3 APIs distintas, uma para comidas, para bebidas e outra para pegar a foto cadastrada no site [Gravatar](https://pt.gravatar.com/).
+A base de dados serão 3 APIs distintas, uma para [comidas](https://www.themealdb.com/api.php), para [bebidas](https://www.thecocktaildb.com/api.php) e outra para pegar a foto cadastrada no site [Gravatar](https://pt.gravatar.com/).
 
 ## Objetivo:
 

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import barbecue from '../../images/barbecue.gif';
+import barbecue from '../../images/teste.gif';
 import fetchPhoto from '../../Requests/GravatarAPI';
 import './Login.css';
 
@@ -49,7 +49,6 @@ function Login({ history }) {
           <img src={barbecue} alt="" className="img-login" />
         </div>
       </section>
-
       <section className="right-login">
         <div className="card-login">
           <label htmlFor="email-login" className="textfield">

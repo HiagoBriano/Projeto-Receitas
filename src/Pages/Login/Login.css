@@ -137,8 +137,6 @@ body * {
   }
 }
 
-/* ---------------------------------------- */
-
 .login-doubt {
   border-radius: 30px;
   background-color: aqua;
@@ -151,10 +149,21 @@ body * {
 .login-doubt-text {
   background-color: antiquewhite;
   color: #000000;
-  /* z-index: 9999999; */
   width: 250px;
   border-radius: 30px;
   padding: 15px;
   position: absolute;
   margin-bottom: 200px;
+}
+
+.popup {
+  position: absolute;
+  height: 250px;
+  padding: 50px;
+}
+
+.popup h3 {
+  color: aliceblue;
+  text-align: center;
+  font-size: 20px;
 }
