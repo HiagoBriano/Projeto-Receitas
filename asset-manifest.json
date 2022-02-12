@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/project-recipes/static/css/main.c48d5ab1.css",
-    "main.js": "/project-recipes/static/js/main.a7fc3421.js",
-    "static/js/787.47b9c64a.chunk.js": "/project-recipes/static/js/787.47b9c64a.chunk.js",
-    "static/media/teste.gif": "/project-recipes/static/media/teste.022e5a9d74bc48d84ab3.gif",
-    "index.html": "/project-recipes/index.html",
-    "main.c48d5ab1.css.map": "/project-recipes/static/css/main.c48d5ab1.css.map",
-    "main.a7fc3421.js.map": "/project-recipes/static/js/main.a7fc3421.js.map",
-    "787.47b9c64a.chunk.js.map": "/project-recipes/static/js/787.47b9c64a.chunk.js.map"
+    "main.css": "/Projeto-Receitas/static/css/main.c48d5ab1.css",
+    "main.js": "/Projeto-Receitas/static/js/main.b552b563.js",
+    "static/js/787.47b9c64a.chunk.js": "/Projeto-Receitas/static/js/787.47b9c64a.chunk.js",
+    "static/media/teste.gif": "/Projeto-Receitas/static/media/teste.022e5a9d74bc48d84ab3.gif",
+    "index.html": "/Projeto-Receitas/index.html",
+    "main.c48d5ab1.css.map": "/Projeto-Receitas/static/css/main.c48d5ab1.css.map",
+    "main.b552b563.js.map": "/Projeto-Receitas/static/js/main.b552b563.js.map",
+    "787.47b9c64a.chunk.js.map": "/Projeto-Receitas/static/js/787.47b9c64a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c48d5ab1.css",
-    "static/js/main.a7fc3421.js"
+    "static/js/main.b552b563.js"
   ]
 }
