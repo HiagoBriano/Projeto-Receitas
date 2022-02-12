@@ -1,0 +1,74 @@
+body {
+  background: rgb(219, 84, 84);
+}
+
+.btn-tamanho {
+  width: 215px;
+  height: 40px;
+}
+
+.main-food-card {
+  margin-bottom: 55px;
+}
+
+.img-drinks {
+  display: grid;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+
+.choice-cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  justify-content: space-evenly;
+
+  width: 100vw;
+  height: 100vh;
+}
+
+/* -------- card ---------- */
+
+.card {
+  width: 20%;
+  background: #fff;
+  border: 1px solid #ccc;
+  margin: 20px;
+  transition: 0.3s;
+  border-radius: 15px 15px 15px 15px;
+}
+
+.card-body {
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.card-body .btn {
+  display: block;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  /* margin-top: 30px; */
+  text-decoration: none;
+  padding: 10px 5px;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (max-width: 1000px) {
+  .card {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .card {
+    width: 80%;
+  }
+}
