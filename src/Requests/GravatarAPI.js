@@ -1,8 +1,10 @@
 import md5 from 'crypto-js/md5';
 
-const fetchPhoto = (email) => {
+const fetchPhoto = async (email) => {
   const code = md5(email).toString();
-  return `https://www.gravatar.com/avatar/${code}`;
+
+  const response = await fetch(`https://pt.gravatar.com/${code}.json`);
+  return response.json();
 };
 
 export default fetchPhoto;

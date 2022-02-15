@@ -1,17 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import context from '../../Context/Context';
 import barbecue from '../../images/teste.gif';
 import fetchPhoto from '../../Requests/GravatarAPI';
 import './Login.css';
 
 function Login({ history }) {
-  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [doubtPassword, setDoubtPassword] = useState(false);
   const [doubtEmail, setDoubtEmail] = useState(false);
 
+  const { recoverLocalStorage, setPhoto, setName, email, setEmail } =
+    useContext(context);
+
   useEffect(() => {
     const Logged = JSON.parse(localStorage.getItem('user'));
     if (Logged) {
+      recoverLocalStorage();
       history.push('/choice');
     }
   }, [history]);
@@ -29,15 +33,28 @@ function Login({ history }) {
 
   const passwordDoubt = () => {
     setDoubtPassword(!doubtPassword);
+    if (doubtEmail) {
+      setDoubtEmail(false);
+    }
   };
 
   const emailDoubt = () => {
     setDoubtEmail(!doubtEmail);
+    if (doubtPassword) {
+      setDoubtPassword(false);
+    }
   };
 
-  const onButton = () => {
-    const photo = fetchPhoto(email);
-    localStorage.setItem('user', JSON.stringify({ email, photo }));
+  const onButton = async () => {
+    const gravatar = await fetchPhoto(email);
+
+    if (gravatar !== 'User not found') {
+      const { displayName, thumbnailUrl } = gravatar.entry[0];
+
+      setPhoto(thumbnailUrl);
+      setName(displayName);
+    }
+
     history.push('/choice');
   };
 

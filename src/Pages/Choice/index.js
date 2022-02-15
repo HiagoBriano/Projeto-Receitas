@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import context from '../../Context/Context';
 import Construction from '../../images/Construction.png';
 import Drink from '../../images/Drink.gif';
 import Favorite from '../../images/Favorite.gif';
@@ -8,6 +9,12 @@ import './Choice.css';
 
 function Choice({ history }) {
   const [popup, setPopup] = useState(false);
+
+  const { updadeLocalStorage } = useContext(context);
+
+  useEffect(() => {
+    updadeLocalStorage();
+  }, []);
 
   const limp = () => {
     localStorage.clear();
@@ -42,26 +49,26 @@ function Choice({ history }) {
         </div>
       ) : (
         <>
-          <div class="choice-cards-single" onClick={() => clickPopup()}>
-            <div class="choice-cards-single-childen">
+          <div className="choice-cards-single" onClick={() => clickPopup()}>
+            <div className="choice-cards-single-childen">
               <img src={Meal} alt="comida" />
               <span>comida</span>
             </div>
           </div>
-          <div class="choice-cards-single" onClick={() => clickPopup()}>
-            <div class="choice-cards-single-childen">
+          <div className="choice-cards-single" onClick={() => clickPopup()}>
+            <div className="choice-cards-single-childen">
               <img src={Drink} alt="comida" />
               <span>Bebida</span>
             </div>
           </div>
-          <div class="choice-cards-single" onClick={() => clickPopup()}>
-            <div class="choice-cards-single-childen">
+          <div className="choice-cards-single" onClick={() => clickPopup()}>
+            <div className="choice-cards-single-childen">
               <img src={Favorite} alt="comida" />
               <span>Receitas favoritas</span>
             </div>
           </div>
-          <div class="choice-cards-single" onClick={() => clickPopup()}>
-            <div class="choice-cards-single-childen">
+          <div className="choice-cards-single" onClick={() => clickPopup()}>
+            <div className="choice-cards-single-childen">
               <img src={Profile} alt="comida" />
               <span>Perfil</span>
             </div>
