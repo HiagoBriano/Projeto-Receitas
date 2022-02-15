@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import context from '../../Context/Context';
-import barbecue from '../../images/teste.gif';
+import barbecue from '../../images/barbecue.gif';
 import fetchPhoto from '../../Requests/GravatarAPI';
 import './Login.css';
 
@@ -14,6 +14,7 @@ function Login({ history }) {
 
   useEffect(() => {
     const Logged = JSON.parse(localStorage.getItem('user'));
+
     if (Logged) {
       recoverLocalStorage();
       history.push('/choice');
