@@ -61,13 +61,19 @@ function Choice({ history }) {
               <span>Bebida</span>
             </div>
           </div>
-          <div className="choice-cards-single" onClick={() => clickPopup()}>
+          <div
+            className="choice-cards-single  choice-cards-down"
+            onClick={() => clickPopup()}
+          >
             <div className="choice-cards-single-childen">
               <img src={Favorite} alt="comida" />
-              <span>Receitas favoritas</span>
+              <span>Favoritas</span>
             </div>
           </div>
-          <div className="choice-cards-single" onClick={() => clickPopup()}>
+          <div
+            className="choice-cards-single choice-cards-down"
+            onClick={() => clickPopup()}
+          >
             <div className="choice-cards-single-childen">
               <img src={Profile} alt="comida" />
               <span>Perfil</span>

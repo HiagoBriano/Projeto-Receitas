@@ -2,15 +2,6 @@ body {
   background: rgb(219, 84, 84);
 }
 
-.btn-tamanho {
-  width: 215px;
-  height: 40px;
-}
-
-.main-food-card {
-  margin-bottom: 55px;
-}
-
 .choice-cards-single-childen img {
   display: grid;
   width: 100%;
@@ -33,14 +24,12 @@ body {
   width: 20%;
   background: #fff;
   border: 1px solid #ccc;
-  margin: 20px;
   transition: 0.3s;
   border-radius: 15px 15px 15px 15px;
 }
 
 .choice-cards-single-childen {
   padding: 30px 20px;
-  text-align: center;
   font-size: 18px;
 }
 
@@ -49,14 +38,12 @@ body {
   color: #fff;
   text-align: center;
   background: linear-gradient(to right, #ff416c, #ff4b2b);
-  text-decoration: none;
   padding: 10px 5px;
   border-radius: 0px 0px 15px 15px;
 }
 
 .choice-cards-single:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
 }
 
 @media screen and (max-width: 1000px) {
@@ -65,9 +52,18 @@ body {
   }
 }
 
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 500px) {
   .choice-cards-single {
-    width: 80%;
+    width: 45%;
+    margin: 0px;
+  }
+
+  .choice-cards-single-childen {
+    padding: 10px 8px;
+  }
+
+  .choice-cards-down {
+    margin-top: -100px;
   }
 }
 
