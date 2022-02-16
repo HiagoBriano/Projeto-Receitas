@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Projeto-Receitas/static/css/main.a558cfe5.css",
-    "main.js": "/Projeto-Receitas/static/js/main.c5756606.js",
+    "main.css": "/Projeto-Receitas/static/css/main.3c6a48d2.css",
+    "main.js": "/Projeto-Receitas/static/js/main.b1efedb3.js",
     "static/js/787.47b9c64a.chunk.js": "/Projeto-Receitas/static/js/787.47b9c64a.chunk.js",
     "static/media/barbecue.gif": "/Projeto-Receitas/static/media/barbecue.69aa8fdcd2a069f19252.gif",
     "static/media/Drink.gif": "/Projeto-Receitas/static/media/Drink.5f707e590a395b60dc64.gif",
@@ -10,12 +10,12 @@
     "static/media/Profile.gif": "/Projeto-Receitas/static/media/Profile.b9db4b8b72df1f8656de.gif",
     "static/media/Construction.png": "/Projeto-Receitas/static/media/Construction.169bb918db7698db491c.png",
     "index.html": "/Projeto-Receitas/index.html",
-    "main.a558cfe5.css.map": "/Projeto-Receitas/static/css/main.a558cfe5.css.map",
-    "main.c5756606.js.map": "/Projeto-Receitas/static/js/main.c5756606.js.map",
+    "main.3c6a48d2.css.map": "/Projeto-Receitas/static/css/main.3c6a48d2.css.map",
+    "main.b1efedb3.js.map": "/Projeto-Receitas/static/js/main.b1efedb3.js.map",
     "787.47b9c64a.chunk.js.map": "/Projeto-Receitas/static/js/787.47b9c64a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a558cfe5.css",
-    "static/js/main.c5756606.js"
+    "static/css/main.3c6a48d2.css",
+    "static/js/main.b1efedb3.js"
   ]
 }
