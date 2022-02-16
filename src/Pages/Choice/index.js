@@ -42,7 +42,7 @@ function Choice({ history }) {
             className="choice-popup-btn"
             type="button"
             data-testid="login-submit-btn"
-            onClick={() => logoff()}
+            onClick={() => logoff(history)}
           >
             Ir para a tela inicial
           </button>
