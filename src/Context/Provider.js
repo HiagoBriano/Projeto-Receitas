@@ -20,9 +20,19 @@ function Provider({ children }) {
     setPhoto(photo);
   };
 
+  const logoff = (history) => {
+    setEmail('');
+    setName('');
+    setPhoto('');
+
+    localStorage.clear();
+    history.push('/');
+  };
+
   const contextValue = {
     updadeLocalStorage,
     recoverLocalStorage,
+    logoff,
     photo,
     setPhoto,
     email,

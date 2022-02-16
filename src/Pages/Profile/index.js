@@ -6,7 +6,8 @@ import './Profile.css';
 function Profile({ history }) {
   const [popup, setPopup] = useState(false);
 
-  const { photo, name, email, recoverLocalStorage } = useContext(context);
+  const { photo, name, email, recoverLocalStorage, logoff } =
+    useContext(context);
 
   const clickPopup = () => {
     setPopup(!popup);
@@ -16,10 +17,10 @@ function Profile({ history }) {
     recoverLocalStorage();
   }, []);
 
-  const clearLocalStorage = () => {
-    localStorage.clear();
-    history.push('/');
-  };
+  // const logoff = () => {
+  //   localStorage.clear();
+  //   history.push('/');
+  // };
 
   return (
     <>
@@ -39,7 +40,7 @@ function Profile({ history }) {
               className="Profile-popup-btn"
               type="button"
               data-testid="login-submit-btn"
-              onClick={() => clearLocalStorage()}
+              onClick={() => logoff(history)}
             >
               Ir para a tela inicial
             </button>
@@ -59,7 +60,9 @@ function Profile({ history }) {
           </div>
           <div className="Profile-contents">
             <h2>Bem vindo 😃</h2>
+
             <h1>{name ? `${name}` : 'É bom ter você aqui'}</h1>
+
             <h3>{email}</h3>
             <button type="button" onClick={() => clickPopup()}>
               Receita finalizadas
@@ -70,7 +73,7 @@ function Profile({ history }) {
             <button type="button" onClick={() => history.push('/choice')}>
               Voltar ao menu
             </button>
-            <button type="button" onClick={() => clearLocalStorage()}>
+            <button type="button" onClick={() => logoff(history)}>
               Fazer logoff
             </button>
           </div>

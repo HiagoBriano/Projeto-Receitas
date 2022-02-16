@@ -10,16 +10,16 @@ import './Choice.css';
 function Choice({ history }) {
   const [popup, setPopup] = useState(false);
 
-  const { updadeLocalStorage } = useContext(context);
+  const { updadeLocalStorage, logoff } = useContext(context);
 
   useEffect(() => {
     updadeLocalStorage();
   }, []);
 
-  const clearLocalStorage = () => {
-    localStorage.clear();
-    history.push('/');
-  };
+  // const logoff = () => {
+  //   localStorage.clear();
+  //   history.push('/');
+  // };
 
   const clickPopup = () => {
     setPopup(!popup);
@@ -42,7 +42,7 @@ function Choice({ history }) {
             className="choice-popup-btn"
             type="button"
             data-testid="login-submit-btn"
-            onClick={() => clearLocalStorage()}
+            onClick={() => logoff()}
           >
             Ir para a tela inicial
           </button>
