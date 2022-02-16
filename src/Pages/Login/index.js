@@ -116,7 +116,6 @@ function Login({ history }) {
               btnCheck() ? 'login-bnt-off login-bnt' : 'login-bnt-on login-bnt'
             }
             type="button"
-            data-testid="login-submit-btn"
             disabled={btnCheck()}
             onClick={() => onButton()}
           >

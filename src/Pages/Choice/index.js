@@ -16,7 +16,7 @@ function Choice({ history }) {
     updadeLocalStorage();
   }, []);
 
-  const limp = () => {
+  const clearLocalStorage = () => {
     localStorage.clear();
     history.push('/');
   };
@@ -42,7 +42,7 @@ function Choice({ history }) {
             className="choice-popup-btn"
             type="button"
             data-testid="login-submit-btn"
-            onClick={() => limp()}
+            onClick={() => clearLocalStorage()}
           >
             Ir para a tela inicial
           </button>
@@ -72,7 +72,7 @@ function Choice({ history }) {
           </div>
           <div
             className="choice-cards-single choice-cards-down"
-            onClick={() => clickPopup()}
+            onClick={() => history.push('/Profile')}
           >
             <div className="choice-cards-single-childen">
               <img src={Profile} alt="comida" />

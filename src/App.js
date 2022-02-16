@@ -4,6 +4,7 @@ import './App.css';
 import Provider from './Context/Provider';
 import Choice from './Pages/Choice';
 import Login from './Pages/Login';
+import Profile from './Pages/Profile';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Provider>
         <Route exact path="/" component={Login} />
         <Route exact path="/choice" component={Choice} />
+        <Route exact path="/Profile" component={Profile} />
       </Provider>
     </Switch>
   );
