@@ -1,5 +1,5 @@
 // Busca as categorias das bebidas
-export const drinksCategoty = async () => {
+export const drinksCategory = async () => {
   const response = await fetch(
     'https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list'
   );

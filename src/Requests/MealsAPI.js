@@ -1,5 +1,5 @@
 // Busca as categorias da comida
-export const mealsCategoty = async () => {
+export const mealsCategory = async () => {
   const response = await fetch(
     'https://www.themealdb.com/api/json/v1/1/list.php?c=list'
   );
@@ -56,7 +56,7 @@ export const listIngredients = (revenue) => {
   return filtrado;
 };
 
-// Busca a bebida sozinha
+// Busca a comida sozinha
 export const mealsAlone = async (id) => {
   const response = await fetch(
     `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
