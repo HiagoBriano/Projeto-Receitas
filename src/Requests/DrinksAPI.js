@@ -85,7 +85,62 @@ export const drinkAlone = async (id) => {
     ingredients: list,
   };
 
-  console.log(dados);
+  return dados;
+};
+
+// Buscar bebidas por categoria
+export const drinkCategoryFilter = async (category) => {
+  const response = await fetch(
+    `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${category}`
+  );
+
+  const responseResults = await response.json();
+
+  const dados = responseResults.drinks.map(
+    ({ strDrink, strDrinkThumb, idDrink }) => ({
+      name: strDrink,
+      image: strDrinkThumb,
+      id: idDrink,
+    })
+  );
+
+  return dados;
+};
+
+// Buscar bebidas por nome
+export const drinkNameFilter = async (name) => {
+  const response = await fetch(
+    `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${name}`
+  );
+
+  const responseResults = await response.json();
+
+  const dados = responseResults.drinks.map(
+    ({ strDrink, strDrinkThumb, idDrink }) => ({
+      name: strDrink,
+      image: strDrinkThumb,
+      id: idDrink,
+    })
+  );
+
+  return dados;
+};
+
+// Buscar bebidas por igredientes
+export const drinkIngredientFilter = async (ingredient) => {
+  const response = await fetch(
+    `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${ingredient}`
+  );
+
+  const responseResults = await response.json();
+
+  const dados = responseResults.drinks.map(
+    ({ strDrink, strDrinkThumb, idDrink }) => ({
+      name: strDrink,
+      image: strDrinkThumb,
+      id: idDrink,
+    })
+  );
 
   return dados;
 };

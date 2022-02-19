@@ -1,4 +1,4 @@
-// Busca as categorias da camida
+// Busca as categorias da comida
 export const mealsCategoty = async () => {
   const response = await fetch(
     'https://www.themealdb.com/api/json/v1/1/list.php?c=list'
@@ -9,7 +9,7 @@ export const mealsCategoty = async () => {
   return responseResults.meals;
 };
 
-// Busca as camidas
+// Busca as comidas
 export const mealsList = async () => {
   const response = await fetch(
     'https://www.themealdb.com/api/json/v1/1/search.php?s='
@@ -25,8 +25,6 @@ export const mealsList = async () => {
       category: strCategory,
     })
   );
-
-  console.log(dados);
 
   return dados;
 };
@@ -87,7 +85,62 @@ export const mealsAlone = async (id) => {
     ingredients: list,
   };
 
-  console.log(dados);
+  return dados;
+};
+
+// Buscar comidas por categoria
+export const mealCategoryFilter = async (category) => {
+  const response = await fetch(
+    `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`
+  );
+
+  const responseResults = await response.json();
+
+  const dados = responseResults.meals.map(
+    ({ strMeal, strMealThumb, idMeal }) => ({
+      name: strMeal,
+      image: strMealThumb,
+      id: idMeal,
+    })
+  );
+
+  return dados;
+};
+
+// Buscar comidas por nome
+export const mealNameFilter = async (name) => {
+  const response = await fetch(
+    `https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`
+  );
+
+  const responseResults = await response.json();
+
+  const dados = responseResults.meals.map(
+    ({ strMeal, strMealThumb, idMeal }) => ({
+      name: strMeal,
+      image: strMealThumb,
+      id: idMeal,
+    })
+  );
+
+  return dados;
+};
+
+// Buscar comidas por igredientes
+export const mealIngredientFilter = async (ingredient) => {
+  const response = await fetch(
+    `https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredient}`
+  );
+
+  const responseResults = await response.json();
+
+  const dados = responseResults.meals.map(
+    ({ strMeal, strMealThumb, idMeal }) => ({
+      name: strMeal,
+      image: strMealThumb,
+      id: idMeal,
+    })
+  );
 
   return dados;
 };
