@@ -5,6 +5,7 @@ function Provider({ children }) {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [photo, setPhoto] = useState('');
+  const [maintenanceOn, setMaintenanceOn] = useState(false);
 
   const updadeLocalStorage = () => {
     localStorage.setItem('user', JSON.stringify({ email, name, photo }));
@@ -24,6 +25,7 @@ function Provider({ children }) {
     setEmail('');
     setName('');
     setPhoto('');
+    setMaintenanceOn(false);
 
     localStorage.clear();
     history.push('/');
@@ -39,6 +41,8 @@ function Provider({ children }) {
     setEmail,
     name,
     setName,
+    maintenanceOn,
+    setMaintenanceOn,
   };
 
   return <context.Provider value={contextValue}>{children}</context.Provider>;

@@ -1,51 +1,27 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
+import Maintenance from '../../Components/Maintenance';
 import context from '../../Context/Context';
-import Construction from '../../images/Construction.png';
 import './Profile.css';
 
 function Profile({ history }) {
-  const [popup, setPopup] = useState(false);
-
-  const { photo, name, email, recoverLocalStorage, logoff } =
-    useContext(context);
-
-  const clickPopup = () => {
-    setPopup(!popup);
-  };
+  const {
+    photo,
+    name,
+    email,
+    recoverLocalStorage,
+    logoff,
+    maintenanceOn,
+    setMaintenanceOn,
+  } = useContext(context);
 
   useEffect(() => {
     recoverLocalStorage();
   }, []);
 
-  // const logoff = () => {
-  //   localStorage.clear();
-  //   history.push('/');
-  // };
-
   return (
     <>
-      {popup ? (
-        <div className="Profile-popup-up">
-          <div className="Profile-popup">
-            <img src={Construction} alt="comida" />
-            <button
-              className="Profile-popup-btn"
-              type="button"
-              data-testid="login-submit-btn"
-              onClick={() => clickPopup()}
-            >
-              Voltar a tela de Perfil
-            </button>
-            <button
-              className="Profile-popup-btn"
-              type="button"
-              data-testid="login-submit-btn"
-              onClick={() => logoff(history)}
-            >
-              Ir para a tela inicial
-            </button>
-          </div>
-        </div>
+      {maintenanceOn ? (
+        <Maintenance history={history} back={'Voltar a tela de perfil'} />
       ) : (
         <div className="Profile">
           <div className="Profile-img">
@@ -64,10 +40,10 @@ function Profile({ history }) {
             <h1>{name ? `${name}` : 'É bom ter você aqui'}</h1>
 
             <h3>{email}</h3>
-            <button type="button" onClick={() => clickPopup()}>
+            <button type="button" onClick={() => setMaintenanceOn(true)}>
               Receita finalizadas
             </button>
-            <button type="button" onClick={() => clickPopup()}>
+            <button type="button" onClick={() => setMaintenanceOn(true)}>
               Receita favoritas
             </button>
             <button type="button" onClick={() => history.push('/choice')}>
