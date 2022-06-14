@@ -1,6 +1,6 @@
 # Projeto Receitas
 
-Estamou desenvolvendo um site de receitas, utilizando o que há de mais moderno dentro do ecossistema React: Hooks e Context API!
+Estou desenvolvendo um site de receitas, utilizando o que há de mais moderno dentro do ecossistema React: Hooks e Context API!
 
 Nele será possível ver, buscar, filtrar, favoritar e acompanhar o progresso de preparação de receitas e drinks!
 
